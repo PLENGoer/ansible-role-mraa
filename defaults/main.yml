@@ -1,0 +1,11 @@
+---
+mraa_ppa: "ppa:mraa/mraa"
+
+# Optionally enable programming in Python
+mraa_wrappers:
+  python:
+    lib_name: "python-mraa"
+    install: no
+  python3:
+    lib_name: "python3-mraa"
+    install: no
