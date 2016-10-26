@@ -1,10 +1,10 @@
 ---
-- name: Add PPA
+- name: PPA
   apt_repository:
     repo: "{{ mraa_ppa }}"
     state: present
 
-- name: Install core libmraa pacakges
+- name: Core libmraa pacakges
   apt:
     pkg: "{{ item }}"
     state: present
@@ -13,7 +13,7 @@
   - libmraa-dev 
   - mraa-tools
 
-- name: Install Python wrappers
+- name: libmraa Python wrappers
   apt:
     pkg: "{{ item.value.lib_name }}"
     state: present
